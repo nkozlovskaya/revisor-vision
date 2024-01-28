@@ -2,7 +2,7 @@ import { FC, memo, useEffect } from "react";
 import { useAppDispatch } from "../../../hooks/useAppDispatch";
 import { fetchUsers } from "../../../redux/reducers/Users/ActionCreators/userActionCreator";
 import { useAppSelector } from "../../../hooks/useAppSelector";
-import { UserItem } from "../UserItem/UserItem";
+import { UserItem } from "../UserItem";
 import styles from './UsersList.module.css';
 
 

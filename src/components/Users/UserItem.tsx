@@ -1,18 +1,15 @@
 import {  memo,useState} from "react";
-import styles from '../../../App.module.css';
-import { AlbumList } from "../../Albums/AlbumList/AlbumList";
-import {albumAPI} from "../../../redux/reducers/Albums/AlbumService/AlbumService";
-import { ViewButton } from "../../../redux/types/buttonView";
-import { Button } from "../../UI/Button/Button";
-import { ItemList } from "../../UI/ItemList/ItemList";
-
+import styles from '../../App.module.css';
+import { AlbumList } from "../Albums/AlbumList";
+import {albumAPI} from "../../redux/reducers/Albums/AlbumService/AlbumService";
+import { ViewButton } from "../../redux/types/buttonView";
+import { ItemList } from "../UI/ItemList/ItemList";
 
 interface UsersItemProps{
     className?: string;
     name: string;
     userId: string;
 };
-
 
 export const UserItem = memo((props: UsersItemProps) => {
     const { name, userId } = props;
@@ -45,12 +42,7 @@ export const UserItem = memo((props: UsersItemProps) => {
 })
 
 
- {/* <div className={styles.item_content} >
-                <Button view={view} onClick={onTogglePlus}/>
-                <div className={styles.name}>
-                    {name}
-                </div>
-            </div> */}
+
 
 // import styles from './UserItem.module.css';
 // import { useAppDispatch } from "../../../hooks/useAppDispatch";

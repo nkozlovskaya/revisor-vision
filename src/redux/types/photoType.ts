@@ -1,4 +1,4 @@
-export interface FotosAlbumType { 
+export interface PhotoType { 
     albumId: string,
         id: string,
         title: string,
