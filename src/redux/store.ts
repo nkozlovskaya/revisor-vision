@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import {rootReducer} from './reducers'
+import { albumAPI } from './reducers/Albums/AlbumService/AlbumService'
 
 const store = configureStore({
   reducer: rootReducer,
+   middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware()
+                .concat(albumAPI.middleware)
 })
 
 export default store
