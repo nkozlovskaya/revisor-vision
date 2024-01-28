@@ -1,7 +1,7 @@
 
 import { FC } from 'react';
 import './App.css';
-import { Navbar } from './components/Navbar/Navbar';
+import { Navbar } from './components/UI/Navbar/Navbar';
 import AppRouter from './router/AppRouter';
 
 export const App:FC=()=> {

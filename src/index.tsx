@@ -3,18 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-// import { Provider } from 'react-redux';
+import  ErrorBoundary  from './providers/ErrorBoundry/ErrorBoundry';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-        {/* <Provider store={store}> */}
-      <BrowserRouter>
-      
-    <App />
-      </BrowserRouter>
+
+    <BrowserRouter>
+      <Provider store={store}>     
+        <ErrorBoundary>        
+          <App />
+        </ErrorBoundary>
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

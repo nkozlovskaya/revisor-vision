@@ -1,13 +1,11 @@
 import {  Suspense, memo, useCallback } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { AppRoutesProps, routeConfig } from './routeConfig'
-// import { MainPage } from '../pages/MainPage'
-// import { FavoritesPage } from '../pages/FavoritesPage'
 
-import { Loader } from '../components/ui/Loader/Loader'
-
+import { Loader } from '../components/UI/Loader/Loader'
 
 const AppRouter = () => {
+
   const renderWithWrapper = useCallback((route: AppRoutesProps) => {
     const element = (
         <Suspense fallback={<Loader />}>
@@ -19,7 +17,6 @@ const AppRouter = () => {
             path={route.path}
             element={ element} />
     )
-    
   }, [])
   return (
       <Routes>
