@@ -1,9 +1,9 @@
 import { FC, memo, useEffect } from "react";
-import { useAppDispatch } from "../../../hooks/useAppDispatch";
-import { fetchUsers } from "../../../redux/reducers/Users/ActionCreators/userActionCreator";
-import { useAppSelector } from "../../../hooks/useAppSelector";
-import { UserItem } from "../UserItem";
-import styles from './UsersList.module.css';
+import { useAppDispatch } from "../../hooks/useAppDispatch";
+import { fetchUsers } from "../../redux/reducers/Users/ActionCreators/userActionCreator";
+import { useAppSelector } from "../../hooks/useAppSelector";
+import { UserItem } from "./UserItem";
+import styles from '../../App.module.css';
 
 
 export const UsersList: FC = memo(() => {

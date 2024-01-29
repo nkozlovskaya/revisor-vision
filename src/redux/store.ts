@@ -8,6 +8,7 @@ const store = configureStore({
    middleware: (getDefaultMiddleware) =>
             getDefaultMiddleware()
             .concat(albumAPI.middleware)
+            
             .concat(photoAPI.middleware)
 })
 
@@ -15,4 +16,5 @@ export default store
 
 export type AppState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
-export type RootState= ReturnType<typeof rootReducer>
+export type RootState = ReturnType<typeof rootReducer>
+

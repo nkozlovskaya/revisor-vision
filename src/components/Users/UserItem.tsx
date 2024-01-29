@@ -4,6 +4,7 @@ import { AlbumList } from "../Albums/AlbumList";
 import {albumAPI} from "../../redux/reducers/Albums/AlbumService/AlbumService";
 import { ViewButton } from "../../redux/types/buttonView";
 import { ItemList } from "../UI/ItemList/ItemList";
+import { Loader } from "../UI/Loader/Loader";
 
 interface UsersItemProps{
     className?: string;
@@ -22,7 +23,6 @@ export const UserItem = memo((props: UsersItemProps) => {
         setView(view === ViewButton.PLUS? ViewButton.MINUS : ViewButton.PLUS);
       }
 
-      
       return (
           <div className={styles.item} >
               <ItemList
@@ -31,7 +31,7 @@ export const UserItem = memo((props: UsersItemProps) => {
                   text={name } />
               {view === ViewButton.MINUS &&
                   <>
-                      {isLoading && <h1>Идет загрузка...</h1>}
+                      {isLoading && <Loader/>}
                       {error && <h1>Произошла ошибка при загрузке</h1>}
                       {albums && (<AlbumList albums={albums} />)}
                   </>
